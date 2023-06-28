@@ -3,14 +3,14 @@ package redispubsub_test
 import (
 	"context"
 	"fmt"
+	"log"
 	"os"
 	"testing"
 	"time"
 
-	"github.com/go-redis/redis/v9"
 	"github.com/ory/dockertest/v3"
 	"github.com/ory/dockertest/v3/docker"
-	log "github.com/sirupsen/logrus"
+	"github.com/redis/go-redis/v9"
 )
 
 var redisCli *redis.Client

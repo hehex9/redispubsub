@@ -1,6 +1,6 @@
 package redispubsub
 
-import "github.com/go-redis/redis/v9"
+import "github.com/redis/go-redis/v9"
 
 func errorAs(err error, i interface{}) bool {
 	switch terr := err.(type) {

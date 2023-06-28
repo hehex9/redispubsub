@@ -8,7 +8,7 @@ import (
 	"strconv"
 	"time"
 
-	"github.com/go-redis/redis/v9"
+	"github.com/redis/go-redis/v9"
 	"gocloud.dev/pubsub"
 )
 
@@ -78,6 +78,7 @@ func (o *URLOpener) OpenSubscriptionURL(ctx context.Context, u *url.URL) (*pubsu
 	}
 	o.SubscriptionOptions.From = from
 	o.SubscriptionOptions.NoAck = noack
+	o.SubscriptionOptions.Consumer = consumer
 	if autoclaim != "" {
 		dur, err := time.ParseDuration(autoclaim)
 		if err != nil {

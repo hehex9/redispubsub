@@ -6,7 +6,7 @@ import (
 	"testing"
 	"time"
 
-	_ "github.com/covrom/redispubsub"
+	_ "github.com/hehex9/redispubsub"
 	"gocloud.dev/pubsub"
 )
 
